@@ -25,6 +25,9 @@
         </activity>
         <activity android:name=".MapChooseActivity" android:label="@string/choosemap">
         </activity>
+
+        <activity android:name=".ExampleListActivity" android:label="@string/listofpoi">
+        </activity>
     </application>
 
 </manifest>

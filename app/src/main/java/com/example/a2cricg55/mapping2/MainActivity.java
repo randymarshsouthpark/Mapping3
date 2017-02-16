@@ -77,6 +77,12 @@ public class MainActivity extends Activity
             startActivityForResult(intent,0);
             return true;
         }
+        else if(item.getItemId() == R.id.listofpoi)
+        {
+            Intent intent   = new Intent(this,ExampleListActivity.class);
+            startActivityForResult(intent,0);
+            return true;
+        }
         return false;
     }
 }

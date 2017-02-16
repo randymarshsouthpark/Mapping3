@@ -3,4 +3,5 @@
     <string name="choosemap">Choose the map style</string>
     <string name="regularview">Choose the normal view</string>
     <string name="cyclemapview">Choose a view for the bikes</string>
+    <string name="listofpoi">List of Intersts</string>
 </resources>
