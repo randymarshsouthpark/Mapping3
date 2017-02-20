@@ -41,10 +41,9 @@ public class MainActivity extends Activity
     protected void onActivityResult(int requestCode,int resultCode,Intent intent)
     {
 
-        if(requestCode==0)
+        if(resultCode==RESULT_OK)
         {
-
-            if (resultCode==RESULT_OK)
+            if (requestCode==0)
             {
                 Bundle extras=intent.getExtras();
                 boolean cyclemap = extras.getBoolean("com.example.cyclemap");
@@ -56,6 +55,14 @@ public class MainActivity extends Activity
                 {
                     mv.setTileSource(TileSourceFactory.MAPNIK);
                 }
+            }
+            else if(requestCode==1)
+            {
+                Bundle extras=intent.getExtras();
+                double latitude = extras.getDouble("com.example.thelocationlat");
+                double longitude = extras.getDouble("com.example.thelocationlong");
+                mv.getController().setCenter(new GeoPoint(latitude,longitude));
+
             }
         }
     }
@@ -80,7 +87,13 @@ public class MainActivity extends Activity
         else if(item.getItemId() == R.id.listofpoi)
         {
             Intent intent   = new Intent(this,ExampleListActivity.class);
-            startActivityForResult(intent,0);
+            startActivityForResult(intent,2);
+            return true;
+        }
+        else if(item.getItemId() == R.id.longlat)
+        {
+            Intent intent   = new Intent(this,LocationActivity.class);
+            startActivityForResult(intent,1);
             return true;
         }
         return false;

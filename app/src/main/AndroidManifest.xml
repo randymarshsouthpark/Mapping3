@@ -28,6 +28,9 @@
 
         <activity android:name=".ExampleListActivity" android:label="@string/listofpoi">
         </activity>
+
+        <activity android:name=".LocationActivity" android:label="@string/longlat">
+        </activity>
     </application>
 
 </manifest>

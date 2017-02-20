@@ -3,4 +3,5 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/choosemap" android:title="@string/choosemap"/>
     <item android:id="@+id/listofpoi" android:title="Choose your point of interest"/>
+    <item android:id="@+id/longlat" android:title="Set your location"/>
 </menu>
