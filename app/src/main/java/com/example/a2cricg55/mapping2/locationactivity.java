@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.view.View;
 import android.widget.EditText;
 
-public class LocationActivity extends Activity implements View.OnClickListener {
+public class locationactivity extends Activity implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.latlong);
